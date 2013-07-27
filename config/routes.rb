@@ -1,7 +1,8 @@
 PicUp::Application.routes.draw do
   resources :pics
   root to:'pics#index'
-
+  get 'newpic', to: 'pics#new', as: :newpic
+  get 'pics', to: 'pics#index', as: :pics 
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
