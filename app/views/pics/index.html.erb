@@ -2,6 +2,8 @@
 
 <table>
   <tr>
+    <th>Name</th>
+    <th>Picture</th>
     <th></th>
     <th></th>
     <th></th>
@@ -9,6 +11,8 @@
 
 <% @pics.each do |pic| %>
   <tr>
+    <td><%= image_tag pic.picture.url(:thumb) %></td>    
++    <td><%= user.name %></td> 
     <td><%= link_to 'Show', pic %></td>
     <td><%= link_to 'Edit', edit_pic_path(pic) %></td>
     <td><%= link_to 'Destroy', pic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
